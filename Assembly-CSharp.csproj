@@ -69,7 +69,6 @@
     <Compile Include="Assets/SoftEffects/Scripts/Styles.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/SoftEffects/Scripts/PrintData.cs" />
-    <Compile Include="Assets/Scripts/test/NewEmptyCSharpScript.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/Scripts/autoScaleScript.cs" />

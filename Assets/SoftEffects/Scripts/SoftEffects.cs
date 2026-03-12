@@ -140,7 +140,6 @@ namespace Mkey
             return false;
         }
 
-        [SerializeField]
         public virtual FaceTarget Facetarget
         {
             get { return FaceTarget.Font; }
