@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator anim;      // assign Animator from Visual
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] public float moveSpeed = 5f;
 
     [Header("Animation")]
     [SerializeField] private string runBoolParam = "isRunning";

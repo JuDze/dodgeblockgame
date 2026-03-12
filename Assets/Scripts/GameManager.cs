@@ -33,7 +33,12 @@ public class GameManager : MonoBehaviour
         if(blockPrefab) blockPrefab.SetActive(false); // hide template
         if (pauseButton) pauseButton.SetActive(false);
        
-
+        if (PlayerPrefs.GetInt("LoadSave", 0) == 1)
+        {
+            PlayerPrefs.DeleteKey("LoadSave");
+            LoadGame();
+            StartGame(); 
+        }
         UpdateUI();
        
     }
@@ -74,6 +79,7 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             Debug.Log("Game Over!");
+            SaveSystem.Delete();
             // TODO: reload scene or show UI
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver"); // reload current scene
         }
@@ -81,6 +87,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Lives left: " + lives);
         }
+        
     }
 
 
@@ -156,6 +163,7 @@ public class GameManager : MonoBehaviour
 
             ShowLevelUpText();
             UpdateUI();
+            SaveGame();
         }
     }
 
@@ -179,4 +187,39 @@ public class GameManager : MonoBehaviour
                     uiText.canvasRenderer.SetAlpha(1f);
             }
     }   
+
+           
+            public void SaveGame()
+        {
+            SaveData data = new SaveData
+            {
+                score         = score,
+                level         = level,
+                lives         = lives,
+                playerX       = player.transform.position.x,
+                playerY       = player.transform.position.y,
+                moveSpeed     = playerScript.moveSpeed,      
+                blockFallSpeed = spawner.blockFallSpeed,
+                spawnInterval = spawner.spawnInterval
+            };
+            SaveSystem.Save(data);
+        }
+
+        public void LoadGame()
+        {
+            SaveData data = SaveSystem.Load();
+            if (data == null) return;
+
+            score  = data.score;
+            level  = data.level;
+            lives  = data.lives;
+
+            player.transform.position = new Vector3(data.playerX, data.playerY, 0f);
+            playerScript.moveSpeed    = data.moveSpeed;
+            spawner.blockFallSpeed    = data.blockFallSpeed;
+            spawner.spawnInterval     = data.spawnInterval;
+
+            UpdateUI();
+        }
+
 }

@@ -29,6 +29,7 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = true;
         Time.timeScale = 0f; // freeze physics and updates
+        FindObjectOfType<GameManager>()?.SaveGame();
         if (pauseMenuUI) pauseMenuUI.SetActive(true);
     }
 

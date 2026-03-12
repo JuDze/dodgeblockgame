@@ -69,6 +69,7 @@
     <Compile Include="Assets/SoftEffects/Scripts/Styles.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/SoftEffects/Scripts/PrintData.cs" />
+    <Compile Include="Assets/Scripts/Save/SaveData.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets/Scripts/autoScaleScript.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/NewEmptyCSharpScript.cs" />
+    <Compile Include="Assets/Scripts/Save/SaveSystem.cs" />
     <Compile Include="Assets/Scripts/BlockSpawner.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />

@@ -13,5 +13,20 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit Game");
         Application.Quit();
     }
+
+    public GameObject continueButton;
+    void Start()
+    {
+        
+        if (continueButton)
+            continueButton.SetActive(SaveSystem.HasSave());
+    }
+
+    public void ContinueGame()
+    {
+        
+        PlayerPrefs.SetInt("LoadSave", 1);
+        SceneManager.LoadScene("game");
+    }
 }
  
