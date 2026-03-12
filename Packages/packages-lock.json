@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.judze.savesystem.runtime": {
+      "version": "file:/Users/judze/Documents/UnityProjects/UnityPackages/JuDze.SaveSystem.Runtime",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "13.0.4",
       "depth": 1,

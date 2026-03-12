@@ -1,4 +1,7 @@
 ﻿<Solution>
+  <Project Path="JuDze.SaveSystem.Runtime.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Game.SaveIntegration.csproj" />
+  <Project Path="JuDze.SaveSystem.Editor.csproj" />
 </Solution>
